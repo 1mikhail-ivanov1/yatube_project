@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     # Главная страница
-    path('', views.index),
-    path('group/<slug:slug>/', views.group_posts),
+    path('', views.index, name='main_page'),
+    path('group/<slug:any_slug>/', views.group_posts, name='group_list')
 ] 
